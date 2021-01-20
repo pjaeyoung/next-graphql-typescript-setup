@@ -21,6 +21,22 @@
   border-color: #0070f3;
 }
 
+.post__btnDelete {
+  background: none;
+  color: #0070f3;
+  border: 2px solid #0070f3;
+  border-radius: 1rem;
+}
+
+.post__btnDelete:hover {
+  color: #fff;
+  background: #0070f3;
+}
+
+.post__btnDelete:active {
+  transform: scale(0.7);
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;

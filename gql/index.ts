@@ -1,1 +1,1 @@
-export { default as ALL_POSTS } from './Posts/allPosts';
+export { default as GET_ALL_TODOS } from './Todos/GetAllTodos';

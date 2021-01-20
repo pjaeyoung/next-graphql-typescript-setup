@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
-import { ApolloClient, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
+import { ApolloClient, HttpLink, NormalizedCacheObject } from '@apollo/client';
 import merge from 'deepmerge';
 import isEqual from 'lodash/isEqual';
+import { cache } from '../cache';
 
 export const APOLLO_STATE_PROP_NAME: string = '__APOLLO_STATE__';
 
@@ -14,7 +15,7 @@ function createApolloClient(): ApolloClient<NormalizedCacheObject> {
       uri: 'https://nextjs-graphql-with-prisma-simple.vercel.app/api', // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
     }),
-    cache: new InMemoryCache(),
+    cache,
   });
 }
 
